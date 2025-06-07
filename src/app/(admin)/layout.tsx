@@ -15,25 +15,23 @@ interface DashboardLayoutProps {
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
   const router = useRouter()
 
-  //TODO: REACTIVAR O CODIGO ABAIXO
+  useEffect(() => {
+    async function checkAuth() {
+      try {
+        const auth = await getAuthState()
 
-  // useEffect(() => {
-  //   async function checkAuth() {
-  //     try {
-  //       const auth = await getAuthState()
+        if (!auth?.user) {
+          router.push("/sign-in")
+        } else {
+          router.push("/dashboard")
+        }
+      } catch (error) {
+        console.error("Erro ao verificar autenticação:", error)
+      }
+    }
 
-  //       if (!auth?.user) {
-  //         router.push("/sign-in")
-  //       } else {
-  //         router.push("/dashboard")
-  //       }
-  //     } catch (error) {
-  //       console.error("Erro ao verificar autenticação:", error)
-  //     }
-  //   }
-
-  //   checkAuth()
-  // }, [router])
+    checkAuth()
+  }, [router])
 
   return (
     <div className={styles.container}>
