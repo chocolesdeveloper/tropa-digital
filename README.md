@@ -25,7 +25,7 @@ Este projeto é um dashboard administrativo que demonstra várias funcionalidade
 
 ### 🔐 Autenticação Simulada
 
-```
+```mermaid
 graph LR
     A[Login Page] --> B{Verificar Credenciais}
     B -->|Válido| C[Dashboard]
@@ -43,7 +43,7 @@ graph LR
 
 ### 📱 Responsividade
 
-```
+```mermaid
 graph TD
     A[Layout Responsivo] --> B[Desktop]
     A --> C[Mobile]
@@ -59,7 +59,7 @@ graph TD
 
 ### 📄 Paginação Dinâmica
 
-```
+```mermaid
 graph LR
     A[Lista de Itens] --> B[Paginação]
     B --> C[Itens por Página]
@@ -143,10 +143,6 @@ O projeto utiliza SASS Modules com Media Queries para garantir uma experiência 
 
 - /sign-in - Página de login
 - /dashboard - Visão geral
-- /events - Gerenciamento de eventos
-- /teams - Gerenciamento de equipes
-- /registrations - Gerenciamento de inscrições
-  Cada rota é protegida e requer autenticação para acesso.
 
 ## 🎨 Temas e Estilos
 
@@ -185,11 +181,3 @@ npm run dev
 ```
 
 4. Acesse http://localhost:3000
-
-## 🤝 Contribuição
-
-Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
