@@ -74,7 +74,7 @@ graph LR
 
 ### 🔄 Roteamento
 
-```
+```mermaid
 graph TD
     A[App Routes] --> B[Páginas Públicas]
     A --> C[Páginas Protegidas]
