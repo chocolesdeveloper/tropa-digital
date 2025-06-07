@@ -1,0 +1,250 @@
+.container {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.welcome {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  line-height: 23px;
+
+  & span {
+    font-weight: 500;
+  }
+}
+
+.containerEvents {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: rgba(204, 98, 55, 0.9);
+  }
+}
+
+.headCard {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.search {
+  background-color: #f6f6f6;
+  border-radius: 33px;
+  width: 203px;
+  display: flex;
+  position: relative;
+  padding: 10px 15px;
+
+  color: rgba(0, 0, 0, 0.2);
+
+  & svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  & input {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    padding-inline: 5px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &:has(input:focus) {
+    outline: 1px solid var(--accent);
+  }
+}
+
+.newInsertButton {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 33px;
+  background-color: var(--accent);
+  color: #fff;
+  font-weight: 500;
+  line-height: 15px;
+  font-size: 13px;
+  cursor: pointer;
+
+  & svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.card {
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid rgba(9, 66, 143, 0.17);
+}
+
+.skeleton {
+  width: 250px;
+  height: 20px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f5f5f5 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+  margin-bottom: 10px;
+}
+
+.trStyle {
+  background-color: transparent;
+}
+
+.thStyle {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(204, 98, 55, 0.2);
+  width: 330px;
+  padding: 14.5px 20px;
+  text-align: start;
+  color: rgba(204, 98, 55, 0.5);
+  font-weight: 500;
+  font-size: 13px;
+
+  &:last-child {
+    width: 40px;
+  }
+}
+
+.tdStyle {
+  width: 330px;
+  border-bottom: 1px solid rgba(204, 98, 55, 0.2);
+  padding: 14.5px 20px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #657593;
+
+  &:last-child {
+    width: 40px;
+  }
+
+  & button {
+    all: unset;
+    cursor: pointer;
+    color: var(--accent);
+  }
+}
+
+.options {
+  padding: "20px";
+  cursor: pointer;
+  display: inline-block;
+}
+
+.popover {
+  position: fixed;
+  top: 1%;
+  left: 5%;
+  transform: translateX(-50%);
+  width: 120px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 8px;
+  z-index: 10;
+}
+
+.footerEvents {
+  padding: 29px 0px 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+
+  & button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 200px;
+    background-color: #f5f5f5;
+    font-size: 12px;
+    line-height: 15px;
+    padding-block: 10px;
+    width: 35px;
+    font-weight: 500;
+
+    &:first-child {
+      width: 75px;
+      padding-inline: 16px;
+
+      &:disabled {
+        background-color: #f5f5f5;
+        color: #657593;
+        cursor: not-allowed;
+      }
+    }
+
+    &:last-child {
+      background-color: var(--accent);
+      width: 75px;
+      padding-inline: 16px;
+      color: #fff;
+
+      &:disabled {
+        background-color: #f5f5f5;
+        color: #657593;
+        cursor: not-allowed;
+      }
+    }
+
+    &.active {
+      background-color: var(--accent);
+      color: #fff;
+    }
+  }
+}
+
+.statusWrapper {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.statusActive {
+  background-color: #4def00;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+}
+
+.statusClosed {
+  background-color: #af0606;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
